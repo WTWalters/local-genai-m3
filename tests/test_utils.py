@@ -334,7 +334,8 @@ class TestMockingPatterns:
     def test_print_mocking_pattern(self):
         """Demonstrate print mocking pattern."""
         
-        with pytest.mock.patch('builtins.print') as mock_print:
+        from unittest.mock import patch
+        with patch('builtins.print') as mock_print:
             print("This should be mocked")
             print("Multiple calls")
         
@@ -345,9 +346,10 @@ class TestMockingPatterns:
     def test_file_mocking_pattern(self):
         """Demonstrate file mocking pattern."""
         
+        from unittest.mock import patch, mock_open
         mock_content = "mocked file content"
         
-        with pytest.mock.patch('builtins.open', pytest.mock.mock_open(read_data=mock_content)):
+        with patch('builtins.open', mock_open(read_data=mock_content)):
             with open('any_file.txt', 'r') as f:
                 content = f.read()
         
@@ -356,7 +358,8 @@ class TestMockingPatterns:
     def test_environment_variable_mocking(self):
         """Demonstrate environment variable mocking."""
         
-        with pytest.mock.patch.dict(os.environ, {'TEST_VAR': 'test_value'}):
+        from unittest.mock import patch
+        with patch.dict(os.environ, {'TEST_VAR': 'test_value'}):
             assert os.environ.get('TEST_VAR') == 'test_value'
         
         # Should not exist outside the patch
