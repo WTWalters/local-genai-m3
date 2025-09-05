@@ -1,0 +1,26 @@
+name: tf_gemma
+channels:
+  - conda-forge
+  - apple
+dependencies:
+  - python=3.11
+  - pip
+  - numpy<2.0
+  - scipy
+  - jupyter
+  - pip:
+    - tensorflow==2.15.0
+    - tensorflow-metal==1.1.0
+    - tensorflow-datasets
+    - keras-nlp==0.14.0
+    - keras==3.0.0
+    - kagglehub
+    - chromadb==0.5.5
+    - docling==2.48.0
+    - sentence-transformers==3.0.1
+    - langchain==0.2.14
+    - langchain-community==0.2.12
+    - pandas
+    - tqdm
+    - python-dotenv
+    - protobuf==3.20.3
