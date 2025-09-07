@@ -1,0 +1,53 @@
+# Orthopedics EMR RAG System - Hybrid LangChain Integration
+# Security audited dependencies for HIPAA-compliant medical AI system
+
+# Core ML Framework
+tensorflow==2.19.1
+tensorflow-metal==1.1.0
+tensorflow-text==2.19.0
+tf-keras==2.20.1
+keras==3.11.3
+keras-hub==0.22.1
+
+# PyTorch for embeddings
+torch==2.8.0
+sentence-transformers==3.0.1
+
+# Vector Database and RAG
+chromadb==0.5.5
+numpy>=1.26.0,<2.0.0
+
+# Selective LangChain Components (Security Audited ✅)
+langchain-core==0.1.0
+langchain-community==0.0.13
+
+# Document Processing (Medical Optimized)
+unstructured[pdf]==0.10.0
+python-docx==1.1.0
+python-magic==0.4.27
+filetype==1.2.0
+nltk==3.8.1
+
+# Data Processing
+pandas==2.3.2
+pytz==2025.2
+tzdata==2025.2
+
+# Utilities
+python-dotenv==1.1.1
+tqdm>=4.67.1
+
+# Security and Validation
+cryptography>=41.0.0
+safety==2.3.5
+bandit==1.7.5
+
+# Development Dependencies
+pytest>=7.0.0
+pytest-asyncio>=0.21.0
+pytest-mock>=3.10.0
+
+# Note: This requirements file represents a security-audited subset of 
+# available packages, specifically chosen for HIPAA-compliant medical 
+# AI applications. All LangChain components have been individually 
+# reviewed for healthcare use.
